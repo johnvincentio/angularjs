@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="">
+        <title>Basic Bootstrap</title>
+
+        <link rel="stylesheet" href="css/bootstrap.css">
+
+        <style>
+            html, body, input, select, textarea {
+                font-size: 1.05em !important;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/jquery-1.12.0.min.js"></script>
+        <script src="js/bootstrap.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <input type="button" id="btnStep1" value="Step1"/>
+                    <input type="button" id="btnStep2" value="Step2"/>
+
+                    <div id="step1" class="panel">
+                        <div class="panel-body">
+                            <h1>Step 1</h1>
+                            <p>This is information about step 1.</p>
+                        </div>
+                    </div>
+
+                   <div id="step2" class="panel">
+                        <div class="panel-body">
+                            <h1>Step 2</h1>
+                            <p>This is information about step 2.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+$(document).ready(function() {
+    var currentStep = 0;
+    $('#step1').hide();
+    $('#step2').hide();
+    $("#btnStep1").click(function() {
+        $("#step1").show();
+        $("#step2").hide();
+        currentStep = 1;
+    });
+    $("#btnStep2").click(function() {
+        $("#step2").show();
+        $("#step1").hide();
+        currentStep = 2;
+    });
+})
+        </script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
+
